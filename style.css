@@ -6,7 +6,6 @@
 
 html, body {
   height: 100%;
-  overflow: hidden;
   font-family: 'Urbanist', sans-serif;
 }
 
@@ -88,6 +87,8 @@ h1 {
   font-size: clamp(1rem, 1.2vw, 1.5rem);
   max-width: 400px;
   margin-bottom: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .grant-access-btn {
@@ -129,11 +130,26 @@ h1 {
   outline: none;
   color: #000000;
   font-size: 15px;
-  &::placeholder {
-    color: #000000;
-  }
   background-color: transparent;
 }
+
+/* Vendor prefixes for better compatibility */
+.search-input::-webkit-input-placeholder {
+  color: #000000;
+}
+
+.search-input::-moz-placeholder {
+  color: #000000;
+}
+
+.search-input:-ms-input-placeholder {
+  color: #000000;
+}
+
+.search-input::placeholder {
+  color: #000000;
+}
+
 
 .search-icon {
   font-size: 20px;
@@ -166,6 +182,9 @@ h1 {
   display: flex;
   justify-content: center;
   gap: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  flex-wrap: wrap;
 }
 
 .info-box {
